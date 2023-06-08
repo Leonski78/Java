@@ -16,21 +16,27 @@ public class program {
         String s = "qwerty";
         s.charAt(0);
         System.out.println(s.charAt(0));
+
         var d = "123";
         System.out.println(d.length());
         System.out.println(getType(d));
+
         int e = 123;
         System.out.println(e++);
         System.out.println(e++);
         System.out.println(++e);
+
         int g = 123;
         g = g-- - --g;
         System.out.println(g);
+
         boolean h = 123 != 234;
         System.out.println(h);
+
         int k = 10;
         System.out.println(k >> 1);
         System.out.println(k << 1);
+        
         int l = 2, m = 3;
         int n = l + m;
         String res = l + "+" + m + "=" + n;
