@@ -1,0 +1,11 @@
+strong {
+	background-color: chocolate;
+	width: 500px;
+	color: aqua;
+	box-shadow: 1px solid rgba(red, green, blue, alpha);
+}
+
+body {
+	background-color: darkcyan;
+	
+}

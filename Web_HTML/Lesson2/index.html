@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+	 function sum(a, b) {
+    return a + b;
+  }
+    let result = sum(152, 8);
+  console.log(result);
+  alert(`результат равен: ${result}`);
+  /*
+  var изменяемая внутри кода. не используют var сейчас
+  const константа
+  let значение переменной может поменяться
+
+        let name = "Леонид";
+        alert(`Привет, ${name}!`);
+
+        const name = prompt('Как тебя зовут,', 'Лео');
+        alert (`Привет, ${name}!`);
+   */
+        const name = prompt('Как тебя зовут,', 'имя');
+        function Greeting(name) {
+            alert(`Привет, ${name}`);
+        }
+        Greeting(name)
+
+ /*
+🖥️ **Задача:** вывести на экран ****в диалоговом окне текст с сообщением “Вы уверены?” 
+и кнопками «ОК» , «Отмена».
+
+- При нажатии на кнопку “ОК” 
+вывести в диалоговом окне текст с сообщением “Мы рады, что Вы уверены!”.
+- При нажатии на кнопку “Отмена” 
+вывести в диалоговом окне текст с сообщением “Жаль, что Вы не уверены…”.
+*/
+// confirm('Вы уверены?');
+
+if(confirm('Вы уверены?')){
+alert ("Мы рады, что Вы уверены!");
+} else {
+    alert ("Жаль, что Вы не уверены…");
+}
+
+/*
+Задача: перепишите код, используя конструкцию switch-case, 
+запрашивая возраст пользователя через диалоговое окно.
+
+11:53
+<script>
+        let age = 101;
+
+        if (age == 18) {
+            alert('Вы совершеннолетний, все можно!');
+        } else if (age == 10) {
+            alert('Вам надо учить уроки!');
+        } else if (age == 30) {
+            alert('Ложитесь спать, завтра на работу');
+        } else {
+            alert('Мы не знаем что Вам делать');
+        }
+
+       */
+      const number = +prompt ('Введите возраст')
+       switch (number) {
+        case 18:
+        alert('Вы совершеннолетний, все можно!');
+         break;
+         case 10:                     
+         alert('Вам надо учить уроки!');           
+         break;           
+         case 30:           
+         alert('Ложитесь спать, завтра на работу');        
+         break;           
+        default:
+        alert('Мы не знаем что Вам делать');
+            break;
+       }
+
+
+    </script>
+
+
+	</script>
+		<script src="script.js"></script>
+<div> <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nam corporis hic assumenda sequi repudiandae, asperiores doloribus neque consectetur laudantium!
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quasi quaerat facere veniam velit quod asperiores corrupti, tempore minima iusto.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dignissimos voluptatem dolorem distinctio quos delectus, ipsum velit saepe molestiae veritatis.
+
+    </p>
+</div>
+</body>
+</html>
