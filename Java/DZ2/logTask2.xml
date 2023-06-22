@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-06-22T09:07:43.657830700Z</date>
+  <millis>1687424863657</millis>
+  <nanos>830700</nanos>
+  <sequence>0</sequence>
+  <logger>DZ2.bubblesort</logger>
+  <level>INFO</level>
+  <class>DZ2.bubblesort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Sort Array</message>
+</record>
+</log>
