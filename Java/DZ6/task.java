@@ -38,12 +38,12 @@ public class task {
         HashSet <notebook> res = new HashSet<>();
 
         System.out.println("Здравствуйте");
-        System.out.print("Введите цифру, соответствующую необходимому критерию:\n 1 - ОЗУ \n 2 - Объем ЖД \n 3 - Операционная система \n или 5, чтобы осуществить поиск\n");
+        System.out.print("Введите цифру, соответствующую необходимому критерию:\n 1 - ОЗУ \n 2 - Объем ЖД \n 3 - Операционная система \n или 4, чтобы осуществить поиск\n");
         Scanner sc = new Scanner(System.in);
         Integer n = sc.nextInt();
         sc.nextLine();
         HashMap<String, Object> filters = new HashMap<>();
-        while(n!=5){
+        while(n!=4){
         if(n==1){
             System.out.println("Введите минимальную оперативную память");
             Integer temp = sc.nextInt();
@@ -61,7 +61,7 @@ public class task {
             String temp = sc.nextLine();
             filters.put("OS", temp);
         }
-        System.out.print("Введите цифру, соответствующую необходимому критерию:\n 1 - ОЗУ \n 2 - Объем ЖД \n 3 - Операционная система \n или 5, чтобы осуществить поиск\n");
+        System.out.print("Введите цифру, соответствующую необходимому критерию:\n 1 - ОЗУ \n 2 - Объем ЖД \n 3 - Операционная система \n или 4, чтобы осуществить поиск\n");
         n = sc.nextInt();
         sc.nextLine();
     }
