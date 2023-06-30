@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class dz2 {
     public static void main(String[] args) {
-    EnteredData(); // Задача 1
+    // EnteredData(); // Задача 1
     //task2(); // Задача 2
-    // task2_2(); // Задача 2.2
     // task3(); // Задача 3
+    task4(); // Задача 4
 
   }
 
@@ -40,7 +40,7 @@ public class dz2 {
   }
 
   /**
-   * Задача 2.1
+   * Задача 2
    * добавили массив
    */
   public static void task2() {
@@ -56,9 +56,10 @@ public class dz2 {
   }
 
   /**
+   * Задача 3
     Throwable надо сдвинуть ниже по иерархии
    */
-  public static void task2_2() {
+  public static void task3() {
     try {
       int a = 90;
       int b = 3;
@@ -81,14 +82,14 @@ public class dz2 {
   }
 
   /**
-   * Задача 3
+   * Задача 4
    *  Разработайте программу,
    *  которая выбросит Exception,
    *  когда пользователь вводит пустую строку.
    *  Пользователю должно показаться сообщение,
    *  что пустые строки вводить нельзя.
    */
-  public static String task3() {
+  public static String task4() {
     Scanner in = new Scanner(System.in);
     String str = in.nextLine();
     if(str.isEmpty())
