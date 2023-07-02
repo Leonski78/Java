@@ -1,6 +1,6 @@
 package DZ3;
 
-public class File{
+public class WriteFile {
 import java.io.FileWriter;
 import java.io.IOException;
 

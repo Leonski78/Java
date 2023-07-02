@@ -6,7 +6,7 @@ public class Program {
     public static void main(String[] args) {
         ParsData parsData = new ParsData(); // Создается объект класса ParsData
         String newFileName = null; // Иннициализация переменной
-        File File = new File(); // Создается объект класса File
+        WriteFile File = new WriteFile(); // Создается объект класса WriteFile
 
         HashMap<String, Object> data = parsData.parsInputData(); // Иннициализация словаря
         while (data.size() != 6) {
@@ -28,7 +28,7 @@ public class Program {
         System.out.println(data);
         String filePath = newFileName;
         System.out.println(filePath);
-        File.writeData(String.valueOf(sb), filePath); // Вызывается метод класса File для записи в файл
+        WriteFile.writeData(String.valueOf(sb), filePath); // Вызывается метод класса WriteFile для записи в файл
 
     }
 }
