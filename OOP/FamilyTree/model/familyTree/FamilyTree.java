@@ -1,4 +1,4 @@
-package FamilyTree;
+package FamilyTree.model.familyTree;
 
 import java.io.Serializable;
 import java.util.ArrayList;

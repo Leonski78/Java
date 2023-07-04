@@ -1,9 +1,15 @@
 package FamilyTree;
 
+
 import java.io.Console;
 import java.util.logging.FileHandler;
 
 import javax.swing.text.View;
+
+import FamilyTree.model.familyTree.FamilyTree;
+import FamilyTree.model.human.Gender;
+import FamilyTree.model.human.Human;
+
 
 public class main {
      public static void main(String[] args) {
