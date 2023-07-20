@@ -1,4 +1,4 @@
-package FamilyTree.model.human;
+package FamilyTree.model.familyTree;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -7,8 +7,9 @@ import java.util.List;
 
 import javax.swing.tree.TreeNode;
 
-public class Human {
-    public class Human implements Serializable, TreeNode<Human> {
+import FamilyTree.model.human.Gender;
+
+public class Human implements Serializable, TreeNode<Human> {
     private String name;
     private Gender gender;
     private LocalDate birthDate;
@@ -85,9 +86,6 @@ public class Human {
         this.mother = mother;
     }
 
-    public Gender getGender() {
-        return gender;
-    }
 
     public String getInfo(){
         StringBuilder sb = new StringBuilder();
@@ -148,10 +146,11 @@ public class Human {
         Human human = (Human) obj;
         return human.getName().equals(getName());
     }
-}
+
 
     @Override
     public String toString() {
         return "Human []";
     }
+
 }
