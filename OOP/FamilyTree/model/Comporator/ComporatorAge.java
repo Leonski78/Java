@@ -1,6 +1,8 @@
-package FamilyTree.model.familyTree;
+package FamilyTree.model.Comporator;
 
 import java.util.Comparator;
+
+import FamilyTree.model.familyTree.Human;
 
 public class ComporatorAge implements Comparator<Human> {
 

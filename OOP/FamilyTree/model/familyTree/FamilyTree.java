@@ -5,68 +5,58 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.swing.tree.TreeNode;
+import FamilyTree.model.Comporator.AnimalIterator;
 
-    public class FamilyTree<T extends TreeNode<T>> implements Serializable, Iterable<T> {
-    private List<T> humanList;
+public class FamilyTree<T extends Animal> implements Iterable<T>, Serializable {
+    private List<T> familyTree;
 
     public FamilyTree() {
-        this(new ArrayList<>());
+        familyTree = new ArrayList<>();
     }
 
-    public FamilyTree(List<T> humanList) {
-        this.humanList = humanList;
-    }
-
-    public boolean add(T human){
-        if (human == null) {
-            return false;
-        }
-        if (!humanList.contains(human)){
-            humanList.add(human);
-            if (human.getFather() != null){
-                human.getFather().addChild(human);
-            }
-            if (human.getMother() != null){
+    public void addFamilyTree(T human) {
+        if (!familyTree.contains(human)) {
+            familyTree.add(human);
+            if (human.getMother() != null) {
                 human.getMother().addChild(human);
             }
-            return true;
+            if (human.getFather() != null) {
+                human.getFather().addChild(human);
+            }
         }
-        return false;
     }
 
-    public T getByName(String name){
-        for (T human: humanList){
-            if (human.getName().equals(name)){
+    @Override
+    public String toString() {
+        String res = "В семье " + familyTree.size() + " человек:\n";
+        for (int i = 0; i < familyTree.size(); i++) {
+            res += (i + 1) + ") " + familyTree.get(i).toString() + "\n";
+        }
+        return res;
+    }
+
+    public T getByName(String humanName) {
+        for (T human : familyTree) {
+            if (human.getName().equalsIgnoreCase(humanName)) {
                 return human;
             }
         }
         return null;
     }
 
-    public String getInfo(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("В дереве ");
-        sb.append(humanList.size());
-        sb.append(" объектов: \n");
-        for (T human: humanList){
-            sb.append(human.getInfo());
-            sb.append("\n");
-        }
-        return sb.toString();
-    }
-
-    public void sortByName(){
-        humanList.sort(new FamilyTreeComparatorByName<>());
-    }
-
-    public void sortByDeathDate(){
-        humanList.sort(new FamilyTreeComparatorByDeathDate<>());
+    public List<T> getFamilyTree() {
+        return familyTree;
     }
 
     @Override
     public Iterator<T> iterator() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'iterator'");
+        return new AnimalIterator<T>(familyTree);
+        // return familyTree.iterator(); // простой способ достать итератор
     }
+
+    public void saveObj(IO save) {
+            save.save("FamilyTree.data", this);
+    }
+
+
 }

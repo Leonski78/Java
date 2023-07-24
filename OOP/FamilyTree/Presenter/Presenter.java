@@ -1,14 +1,18 @@
-package FamilyTree.Presenter;
+package FamilyTree.presenter;
 
+import FamilyTree.model.familyTree.FamilyTree;
+import FamilyTree.model.familyTree.Human;
+import FamilyTree.model.familyTree.IO;
+import FamilyTree.model.Comporator.ComporatorAge;
 import FamilyTree.Interface.View;
 
 public class Presenter {
     private View view;
     private IO serialize;
     private FamilyTree<Human> familyConnect;
-    private HumanComporatorByAge sortAge;
+    private ComporatorAge sortAge;
 
-    public Presenter(View view, FamilyTree<Human> familyConnect, IO serialize, HumanComporatorByAge sortAge) {
+    public Presenter(View view, FamilyTree<Human> familyConnect, IO serialize, ComporatorAge sortAge) {
         this.familyConnect = familyConnect;
         this.view = view;
         this.serialize = serialize;

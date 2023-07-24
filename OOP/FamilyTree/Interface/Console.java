@@ -2,6 +2,8 @@ package FamilyTree.Interface;
 
 import java.util.Scanner;
 
+import FamilyTree.presenter.Presenter;
+
 public class Console implements View {
     private Scanner scan;
     private Presenter presenter;

@@ -1,6 +1,6 @@
-import FamilyTree.Presenter.Presenter;
-
 package FamilyTree.Interface;
+
+import FamilyTree.presenter.Presenter;
 
 public interface View {
     void setPresenter(Presenter presenter);
